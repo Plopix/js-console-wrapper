@@ -1,6 +1,6 @@
 {
   "name": "@plopix/js-console",
-  "version": "0.0.200983",
+  "version": "1.0.1",
   "description": "A beautiful console.log wrapper",
   "main": "dist/var/Console.js",
   "scripts": {

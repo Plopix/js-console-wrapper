@@ -12,7 +12,7 @@ This package is a wrapper of `console.log` that enables outputs depending a Verb
 Inject the library in your code:
 
 ```html
-<script src="https://github.com/Plopix/js-console-wrapper/releases/download/v0.0.200983/plopix-js-console.min.js"></script>
+<script src="https://github.com/Plopix/js-console-wrapper/releases/download/v1.0.1/plopix-js-console.min.js"></script>
 ```
 
 You have now access to `PlopixConsole` globally.
