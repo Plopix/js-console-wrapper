@@ -1,26 +1,46 @@
 {
-    "name": "plopix-js-console",
-    "version": "1.0.0",
-    "description": "A beautiful Console Log wrapper",
-    "main": "dist/var/Console.js",
-    "scripts": {
-        "build-prod": "webpack --mode=production && tsc",
-        "build-dev": "webpack --mode=development && tsc",
-        "test": "mocha tests",
-        "start": "node tests/web/server.js"
-    },
-    "keywords": [
-        "console"
-    ],
-    "author": "Sébastien Morel aka Plopix",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/node": "^13.9.8",
-        "expect.js": "^0.3.1",
-        "mocha": "^7.1.1",
-        "ts-loader": "^6.2.2",
-        "typescript": "^3.8.3",
-        "webpack": "^4.42.1",
-        "webpack-cli": "^3.3.11"
-    }
+  "name": "@plopix/js-console",
+  "version": "1.0.0",
+  "description": "A beautiful console.log wrapper",
+  "main": "dist/var/Console.js",
+  "scripts": {
+    "build-prod": "webpack --mode=production && tsc",
+    "build-dev": "webpack --mode=development && tsc",
+    "tests": "mocha tests",
+    "start": "node tests/web/server.js"
+  },
+  "keywords": [
+    "console",
+    "logger",
+    "log",
+    "developer",
+    "colorized logs",
+    "logs",
+    "debug"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plopix/js-console-wrapper.git"
+  },
+  "author": "Sébastien Morel aka Plopix",
+  "homepage": "https://github.com/Plopix/js-console-wrapper",
+  "bugs": {
+    "url": "https://github.com/Plopix/js-console-wrapper/issues"
+  },
+  "issues": "https://github.com/Plopix/js-console-wrapper/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "expect.js": "^0.3.1",
+    "mocha": "^7.1.1",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {}
 }
