@@ -1,12 +1,12 @@
 {
   "name": "@plopix/js-console",
-  "version": "1.0.0",
+  "version": "0.0.200983",
   "description": "A beautiful console.log wrapper",
   "main": "dist/var/Console.js",
   "scripts": {
     "build-prod": "webpack --mode=production && tsc",
     "build-dev": "webpack --mode=development && tsc",
-    "tests": "mocha tests",
+    "test": "mocha tests",
     "start": "node tests/web/server.js"
   },
   "keywords": [

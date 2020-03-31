@@ -1,6 +1,7 @@
 var Console = PlopixConsole;
 
 Console.verbosity = 0;
+Console.logOnLoad();
 
 Console.debug("debug");
 Console.info("info");

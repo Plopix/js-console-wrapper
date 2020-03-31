@@ -4,6 +4,37 @@ import {localStorage} from "./LocalStorage";
 
 export class Console extends Logger {
 
+    public logOnLoad() {
+        const elements = document.querySelectorAll('[data-plopix-console]');
+        if (elements === null) {
+            return;
+        }
+
+        const getVerbosity = (element: any): number => {
+            const value = element.getAttribute('data-verbosity');
+            if (value === null) {
+                return 0;
+            }
+            return +value;
+        };
+
+        const getContext = (element: any): any | null => {
+            const value = element.getAttribute('data-context');
+            if (value === null) {
+                return null;
+            }
+            try {
+                return JSON.parse(value);
+            } catch (e) {
+                return value;
+            }
+        };
+
+        for (const element of elements) {
+            this.log(getVerbosity(element), element.textContent === null ? 'Unkown message' : element.textContent, getContext(element));
+        }
+    }
+
     protected innerLog(log: Log): void {
         const verbosity = localStorage.get('plopix.console.verbosity') != null ? localStorage.get('plopix.console.verbosity') : this._verbosity;
         if (log.level >= verbosity) {
