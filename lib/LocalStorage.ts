@@ -6,31 +6,25 @@ interface LocalStorageInterfance {
 
 class LocalStorage {
     private _storeAvailable: boolean;
-    private _store: LocalStorageInterfance;
+    private _store: LocalStorageInterfance | null;
 
     constructor() {
         let storage;
         this._storeAvailable = false;
+        this._store = null;
         try {
             storage = window['localStorage'];
-            var x = '__storage_test__';
+            const x = '__storage_test__';
             storage.setItem(x, x);
             storage.removeItem(x);
             this._storeAvailable = true;
         } catch (e) {
-            this._storeAvailable = e instanceof DOMException && (e.code === 22 || e.code === 1014 || e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') && (storage !== null && typeof storage !== 'undefined' && storage.length !== 0);
-        }
-        this._store = window['localStorage'];
-    }
-
-    set(key: string, value: any): void {
-        if (this._storeAvailable) {
-            this._store.setItem(key, JSON.stringify(value));
+            this._storeAvailable = false;
         }
     }
 
     get(key: string): any | null {
-        if (this._storeAvailable) {
+        if (this._storeAvailable && this._store !== null) {
             return JSON.parse(this._store.getItem(key));
         }
         return null;
