@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "./dist/ts",
+        "strict": true,
+        "noImplicitAny": true,
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
