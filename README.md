@@ -1,9 +1,16 @@
 # Plopix - JS Console
 
-This package is a wrapper of `console.log` that enables outputs depending a Verbosity level that:
+This package is a wrapper of `console.log` that enables output depending on a Verbosity level.
+It also brings color and manage compability.
+
+The verbosity level helps to only display from a certain level. 
+ 
 - you can set in the source code
 - you can override via LocalStorage using the key: `plopix.console.verbosity`
 
+> In your console toolbar, run `localStorage.setItem("plopix.console.verbosity",250)` for instance.
+
+Pretty neat!
 
 ## Installation
 
@@ -20,7 +27,11 @@ You have now access to `PlopixConsole` globally.
 
 ### Node
 
-Easiest is to create your own `Console.js` file, and put:
+- Use NPM `npm i @plopix/js-console -D`
+- Use Yarn `yarn add --dev @plopix/js-console`
+
+Then the asiest is to create your own `Console.js` file, and put:
+
 ```javascript
 import { Console } from '@plopix/js-console/dist/ts/Console';
 
