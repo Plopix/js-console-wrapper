@@ -20,7 +20,24 @@ You have now access to `PlopixConsole` globally.
 
 ### Node
 
+Easiest is to create your own `Console.js` file, and put:
+```javascript
+import { Console } from '@plopix/js-console/dist/ts/Console';
 
+const PlopixConsole = new Console();
+PlopixConsole.verbosity = 0;
+PlopixConsole.logOnLoad();
+
+export default PlopixConsole;
+```
+
+And then import it in your project when you want
+
+```javascript
+import Console from './path/to/Console';
+
+Console.success("Console well installed!");
+```
 
 ## Usage
 
